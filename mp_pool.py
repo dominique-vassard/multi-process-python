@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-from multiprocessing import Pool
+from multiprocessing import Pool, cpu_count
 import time
 
 from pi_monte_carlo import NB_TRIALS, estimated_pi, monte_carlo_trials
 
 # Number of cores to use
-NB_CORES = 8
+NB_CORES = cpu_count()
 
 
 def calculate_pi_pool(nb_processes, nb_trials):
